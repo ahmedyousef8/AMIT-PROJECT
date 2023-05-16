@@ -7,12 +7,12 @@
 #include <util/delay.h>
 
 void M_Forward(void){
-	DIO_voidSetPinValue(PORTD,PIN4,HIGH);
-	DIO_voidSetPinValue(PORTD,PIN5,HIGH);
-	DIO_voidSetPinValue(PORTC,PIN3,HIGH);
-	DIO_voidSetPinValue(PORTC,PIN5,HIGH);
-	DIO_voidSetPinValue(PORTC,PIN4,LOW);
-	DIO_voidSetPinValue(PORTC,PIN6,LOW);
+	DIO_voidSetPinValue(PORTD,PIN4,HIGH);   //EN1
+	DIO_voidSetPinValue(PORTD,PIN5,HIGH);   //EN2
+	DIO_voidSetPinValue(PORTC,PIN3,HIGH);   //IN1
+	DIO_voidSetPinValue(PORTC,PIN5,HIGH);   //IN3
+	DIO_voidSetPinValue(PORTC,PIN4,LOW);    //IN2
+	DIO_voidSetPinValue(PORTC,PIN6,LOW);    //IN4
 }
 
 void M_Backward(void){
@@ -25,12 +25,11 @@ void M_Backward(void){
 }
 
 void M_Stop(void){
-	DIO_voidSetPinValue(PORTD,PIN4,HIGH);
-	DIO_voidSetPinValue(PORTD,PIN5,LOW);
-	DIO_voidSetPinValue(PORTC,PIN3,LOW);
-	DIO_voidSetPinValue(PORTC,PIN5,LOW);
-	DIO_voidSetPinValue(PORTC,PIN4,LOW);
-	DIO_voidSetPinValue(PORTC,PIN6,LOW);
+  
+	DIO_voidSetPinValue(PORTC,PIN3,LOW);   
+	DIO_voidSetPinValue(PORTC,PIN5,LOW);   
+	DIO_voidSetPinValue(PORTC,PIN4,LOW);   
+	DIO_voidSetPinValue(PORTC,PIN6,LOW);   
 }
 
 void M_Left(void){
